@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sandbox/src/main/java/Geomertry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/src/main/java/Hello.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="Geometry">
+      <change afterPath="$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/geometry/figures/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/geometry/figures/Square.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/src/main/java/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/geometry/Geometry.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +40,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2pd6n91Vxh7MIZFqSL68lJ5r5PR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,6 +51,7 @@
   "keyToString": {
     "Gradle.java_for_testers:sandbox [:sandbox:Geomertry.main()].executor": "Run",
     "Gradle.java_for_testers:sandbox [:sandbox:Hello.main()].executor": "Run",
+    "Gradle.java_for_testers:sandbox [:sandbox:ru.stqa.geometry.Geometry.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
@@ -57,9 +61,15 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Geomertry">
-    <configuration name="Geomertry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Geomertry" />
+  <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="Square" />
+      <recent name="Rectangle" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Geometry">
+    <configuration name="Geometry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.Geometry" />
       <module name="java_for_testers.sandbox.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -85,7 +95,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Geomertry" />
+        <item itemvalue="Application.Geometry" />
         <item itemvalue="Application.Hello" />
       </list>
     </recent_temporary>
@@ -99,6 +109,19 @@
       <option name="presentableId" value="Default" />
       <updated>1733083771969</updated>
     </task>
+    <task id="LOCAL-00001" summary="Geometry">
+      <option name="closed" value="true" />
+      <created>1733085765054</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733085765054</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Geometry" />
+    <option name="LAST_COMMIT_MESSAGE" value="Geometry" />
   </component>
 </project>
