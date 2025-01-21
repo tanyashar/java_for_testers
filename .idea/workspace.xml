@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="lessons 1-4">
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/resources/images/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/resources/images/man.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/resources/images/man2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/resources/images/woman.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/resources/images/woman2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/GroupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/GroupHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HelperBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/LoginHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/LoginHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/model/ContactData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/model/ContactData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/model/GroupData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/model/GroupData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/ContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/GroupModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupModificationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/GroupRemovalTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupRemovalTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/TestBase.java" afterDir="false" />
-    </list>
+    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="ru.stqa.addressbook package added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -308,14 +289,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737467339297</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ru.stqa.addressbook package added">
+      <option name="closed" value="true" />
+      <created>1737476055648</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737476055648</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Geometry" />
     <MESSAGE value="Geometry - выполнена структуризация кода" />
     <MESSAGE value="lessons 1-4" />
-    <option name="LAST_COMMIT_MESSAGE" value="lessons 1-4" />
+    <MESSAGE value="ru.stqa.addressbook package added" />
+    <option name="LAST_COMMIT_MESSAGE" value="ru.stqa.addressbook package added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
