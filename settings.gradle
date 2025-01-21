@@ -1,2 +1,3 @@
 include 'sandbox'
+include 'addressbook_web_tests'
 
