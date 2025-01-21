@@ -1,10 +1,8 @@
-package tests;
+package ru.stqa.addressbook.tests;
 
-import model.ContactData;
+import ru.stqa.addressbook.model.ContactData;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.ArrayList;
@@ -22,7 +20,9 @@ public class ContactTests extends TestBase{
                     contacts.add(new ContactData()
                             .withLastName(lastName)
                             .withFirstName(firstName)
-                            .withAddress(address));
+                            .withAddress(address)
+//                            .withPhoto("src\\test\\resources\\images\\avatar.png"));
+                            .withPhoto(randomFile("src\\test\\resources\\images")));
                 }
             }
         }

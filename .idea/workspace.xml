@@ -4,28 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="Geometry - выполнена структуризация кода">
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/ApplicationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/ContactHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/GroupHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/HelperBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/LoginHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/model/ContactData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/model/GroupData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/ContactTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/GroupModificationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/TestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/src/test/java/MathTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/src/test/java/ru/stqa/collections/CollectionTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/src/test/java/ru/stqa/geometry/figures/RectangleTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/src/test/java/ru/stqa/geometry/figures/SquareTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="lessons 1-4">
+      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/resources/images/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/resources/images/man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/resources/images/man2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/resources/images/woman.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/resources/images/woman2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/src/main/java/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/main/java/Hello.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/geometry/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/geometry/Geometry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/geometry/figures/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/geometry/figures/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/geometry/figures/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/geometry/figures/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/GroupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/GroupHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HelperBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/LoginHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/LoginHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/model/ContactData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/model/ContactData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/model/GroupData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/model/GroupData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/ContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/GroupModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupModificationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/GroupRemovalTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupRemovalTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +77,11 @@
     &quot;accountId&quot;: &quot;111cc42f-ddbe-4a88-a794-2bef4af3c005&quot;
   }
 }</component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="GradleRunConfiguration" name="Rerun Failed Tests" />
+    </enabled-run-configurations>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -94,52 +96,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Hello.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CollectionTests.arrayTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CollectionTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CollectionTests.listTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ContactTests.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.GroupCreationTests.canCreateGroup.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GroupCreationTests.canCreateGroupWithNameOnly.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.GroupCreationTests.canCreateMultipleGroups.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GroupCreationTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GroupModificationTests.canModifyGroup.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.GroupModificationTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GroupRemovalTests.canRemoveGroup.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.GroupRemovalTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SquareTests.canCalculateArea.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SquareTests.canCalculatePerimeter.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SquareTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'tests'.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.java_for_testers:sandbox [:sandbox:Geomertry.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_for_testers:sandbox [:sandbox:Hello.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.java_for_testers:sandbox [:sandbox:ru.stqa.geometry.Geometry.main()].executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in java_for_testers.addressbook_web_tests.test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GroupCreationTests.canCreateGroupWithNameOnly.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GroupCreationTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GroupCreationTests.testaddressbook1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GroupRemovalTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MathTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MathTests.testDivideByZero.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RectangleTests.cannotCreateSquareWithNegativeSide.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RectangleTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RectangleTests.testEquality.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RectangleTests.testEqualitySwapedSides.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.SquareTests.canCalculateArea.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SquareTests.cannotCreateSquareWithNegativeSide.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Hello.executor": "Run",
+    "Gradle.CollectionTests.arrayTests.executor": "Run",
+    "Gradle.CollectionTests.executor": "Run",
+    "Gradle.CollectionTests.listTests.executor": "Run",
+    "Gradle.ContactTests (1).executor": "Run",
+    "Gradle.ContactTests.executor": "Debug",
+    "Gradle.GroupCreationTests.canCreateGroup.executor": "Run",
+    "Gradle.GroupCreationTests.canCreateGroupWithNameOnly.executor": "Debug",
+    "Gradle.GroupCreationTests.canCreateMultipleGroups.executor": "Run",
+    "Gradle.GroupCreationTests.executor": "Run",
+    "Gradle.GroupModificationTests.canModifyGroup.executor": "Debug",
+    "Gradle.GroupModificationTests.executor": "Run",
+    "Gradle.GroupRemovalTests.canRemoveGroup.executor": "Debug",
+    "Gradle.GroupRemovalTests.executor": "Run",
+    "Gradle.SquareTests.canCalculateArea.executor": "Run",
+    "Gradle.SquareTests.canCalculatePerimeter.executor": "Run",
+    "Gradle.SquareTests.executor": "Run",
+    "Gradle.Tests in 'tests'.executor": "Debug",
+    "Gradle.java_for_testers:sandbox [:sandbox:Geomertry.main()].executor": "Run",
+    "Gradle.java_for_testers:sandbox [:sandbox:Hello.main()].executor": "Run",
+    "Gradle.java_for_testers:sandbox [:sandbox:ru.stqa.geometry.Geometry.main()].executor": "Run",
+    "JUnit.All in java_for_testers.addressbook_web_tests.test.executor": "Run",
+    "JUnit.GroupCreationTests.canCreateGroupWithNameOnly.executor": "Run",
+    "JUnit.GroupCreationTests.executor": "Run",
+    "JUnit.GroupCreationTests.testaddressbook1.executor": "Run",
+    "JUnit.GroupRemovalTests.executor": "Run",
+    "JUnit.MathTests.executor": "Run",
+    "JUnit.MathTests.testDivideByZero.executor": "Debug",
+    "JUnit.RectangleTests.cannotCreateSquareWithNegativeSide.executor": "Run",
+    "JUnit.RectangleTests.executor": "Run",
+    "JUnit.RectangleTests.testEquality.executor": "Run",
+    "JUnit.RectangleTests.testEqualitySwapedSides.executor": "Debug",
+    "JUnit.SquareTests.canCalculateArea.executor": "Run",
+    "JUnit.SquareTests.cannotCreateSquareWithNegativeSide.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/tanya/IdeaProjects/java_for_testers/addressbook_web_tests/src/test/resources/images",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tanya\IdeaProjects\java_for_testers\addressbook_web_tests\src\test\resources\images" />
+    </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="ApplicationManager" />
       <recent name="TestBase" />
@@ -147,7 +154,7 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ContactTests">
+  <component name="RunManager" selected="Gradle.ContactTests (1)">
     <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Hello" />
       <module name="java_for_testers.sandbox.main" />
@@ -155,12 +162,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":addressbook_web_tests:test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.addressbook.tests.ContactTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ContactTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="-Pbrowser=chrome" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -203,30 +234,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GroupModificationTests.canModifyGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":addressbook_web_tests:test" />
-            <option value="--tests" />
-            <option value="&quot;tests.GroupModificationTests.canModifyGroup&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="GroupRemovalTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -253,18 +260,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Hello" />
+      <item itemvalue="Gradle.ContactTests (1)" />
       <item itemvalue="Gradle.ContactTests" />
-      <item itemvalue="Gradle.GroupModificationTests.canModifyGroup" />
       <item itemvalue="Gradle.GroupCreationTests" />
       <item itemvalue="Gradle.GroupRemovalTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ContactTests (1)" />
         <item itemvalue="Gradle.ContactTests" />
         <item itemvalue="Application.Hello" />
         <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="Gradle.GroupRemovalTests" />
-        <item itemvalue="Gradle.GroupModificationTests.canModifyGroup" />
       </list>
     </recent_temporary>
   </component>
@@ -293,13 +300,22 @@
       <option name="project" value="LOCAL" />
       <updated>1733086566811</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="lessons 1-4">
+      <option name="closed" value="true" />
+      <created>1737467339297</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737467339297</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Geometry" />
     <MESSAGE value="Geometry - выполнена структуризация кода" />
-    <option name="LAST_COMMIT_MESSAGE" value="Geometry - выполнена структуризация кода" />
+    <MESSAGE value="lessons 1-4" />
+    <option name="LAST_COMMIT_MESSAGE" value="lessons 1-4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -310,23 +326,23 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/manager/GroupHelper.java</url>
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/GroupHelper.java</url>
           <line>34</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/GroupModificationTests.java</url>
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupModificationTests.java</url>
           <line>24</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/GroupCreationTests.java</url>
-          <line>77</line>
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java</url>
+          <line>76</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/tests/GroupCreationTests.java</url>
-          <line>87</line>
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java</url>
+          <line>86</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">

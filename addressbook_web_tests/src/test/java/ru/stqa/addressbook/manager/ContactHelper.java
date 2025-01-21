@@ -1,6 +1,6 @@
-package manager;
+package ru.stqa.addressbook.manager;
 
-import model.ContactData;
+import ru.stqa.addressbook.model.ContactData;
 import org.openqa.selenium.By;
 
 public class ContactHelper extends HelperBase {
@@ -56,6 +56,7 @@ public class ContactHelper extends HelperBase {
         type(By.name("firstname"), contact.firstName());        
         type(By.name("lastname"), contact.lastName());
         type(By.name("address"), contact.address());
+        attach(By.name("photo"), contact.photo());
     }
 
     private void initContactCreation() {
