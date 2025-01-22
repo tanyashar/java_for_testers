@@ -2,6 +2,7 @@ package ru.stqa.addressbook.tests;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import ru.stqa.addressbook.common.Common;
 import ru.stqa.addressbook.model.GroupData;
 import org.junit.jupiter.api.Assertions;
@@ -52,10 +53,11 @@ public class GroupCreationTests extends TestBase {
         }*/
 
 
-        ObjectMapper mapper = new ObjectMapper();
+        ObjectMapper mapper = new XmlMapper();
+        // ObjectMapper mapper = new ObjectMapper(); // для JSON
 
         var json = "";
-        try (var reader = new FileReader("groups.json");
+        try (var reader = new FileReader("groups.xml");
             var bReader = new BufferedReader(reader);
         ) {
             var line = bReader.readLine();
