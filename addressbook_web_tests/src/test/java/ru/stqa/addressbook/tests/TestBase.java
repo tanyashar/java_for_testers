@@ -4,7 +4,11 @@ import ru.stqa.addressbook.manager.ApplicationManager;
 import org.junit.jupiter.api.BeforeEach;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.Properties;
 import java.util.Random;
 
 public class TestBase {
@@ -13,11 +17,19 @@ public class TestBase {
 
     // @BeforeAll
     @BeforeEach
-    public void setUp() {
-        if (app == null)
+    public void setUp() throws IOException {
+        if (app == null) {
+            var properties = new Properties();
+            properties.load(new FileReader(System.getProperty("target", "local.properties")));
+
             app = new ApplicationManager();
-        // app.ini t("chrome");
-        app.init(System.getProperty("browser", "firefox"));
+            // app.init("chrome");
+            app.init(System.getProperty("browser", "firefox"), properties);
+        }
+
+        // System.getProperty - для считывания входного параметра из параметров запуска -Pbrowser=chrome
+        // если в параметрах запуска (Edit Configurations) нет аргумента -Pbrowser, по дефолту юзаем браузер firefox
+        // для этого не забыть добавить test {...} в build.gradle
     }
 
     // @AfterEach
