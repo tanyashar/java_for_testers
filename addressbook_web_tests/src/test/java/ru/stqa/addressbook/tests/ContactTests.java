@@ -9,8 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ContactTests extends TestBase{
-
-
     public static ArrayList<ContactData> contactGroupProvider() {
         var contacts = new ArrayList<ContactData>();
         
@@ -21,7 +19,7 @@ public class ContactTests extends TestBase{
                             .withLastName(lastName)
                             .withFirstName(firstName)
                             .withAddress(address)
-//                            .withPhoto("src\\test\\resources\\images\\avatar.png"));
+                            // .withPhoto("src\\test\\resources\\images\\avatar.png"));
                             .withPhoto(randomFile("src\\test\\resources\\images")));
                 }
             }

@@ -1,11 +1,20 @@
 package ru.stqa.addressbook.tests;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import ru.stqa.addressbook.common.Common;
 import ru.stqa.addressbook.model.GroupData;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -22,7 +31,7 @@ public class GroupCreationTests extends TestBase {
      }*/
 
     // Генератор тестовых данных - должен быт статическим
-    public static ArrayList<GroupData> groupProvider() {
+    public static ArrayList<GroupData> groupProvider() throws IOException {
         /*var result = new ArrayList<>(List.of(
                 new GroupData(), // покрываем canCreateGroupWithEmptyName
                 new GroupData().withName("some name"), // покрываем canCreateGroupWithNameOnly
@@ -31,7 +40,7 @@ public class GroupCreationTests extends TestBase {
 
         var result = new ArrayList<GroupData>();
 
-        for (var name: List.of("not empty name")) {
+        /*for (var name: List.of("not empty name")) {
             for (var header: List.of("not empty header")) {
                 for (var footer: List.of("not empty footer")) {
                     result.add(new GroupData()
@@ -40,15 +49,29 @@ public class GroupCreationTests extends TestBase {
                             .withFooter(footer));
                 }
             }
-        }
+        }*/
 
-        for (int i = 0; i < 5; i++) {
-            result.add(new GroupData()
-                    .withName(randomString(i * 10))
-                    .withHeader(randomString(i * 10))
-                    .withFooter(randomString(i * 10)));
-        }
 
+        ObjectMapper mapper = new ObjectMapper();
+
+        var json = "";
+        try (var reader = new FileReader("groups.json");
+            var bReader = new BufferedReader(reader);
+        ) {
+            var line = bReader.readLine();
+            while (line != null) {
+                json = json + line;
+                line = bReader.readLine();
+            }
+        }
+        // ИЛИ
+        // var json = Files.readString(Paths.get("groups.json"));
+
+        var value = mapper.readValue(json, new TypeReference<List<GroupData>>() {}); // = сериализация инфы из файла в объектё
+
+        // ИЛИ
+        // var value = mapper.readValue(new File("groups.json"), new TypeReference<List<GroupData>>() {});
+        // result.addAll(value);
         return result;
     }
 

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="ru.stqa.addressbook package added" />
+    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="workspace xml changes">
+      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/common/Common.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/generator/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/TestBase.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,11 +66,6 @@
     &quot;accountId&quot;: &quot;111cc42f-ddbe-4a88-a794-2bef4af3c005&quot;
   }
 }</component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="GradleRunConfiguration" name="Rerun Failed Tests" />
-    </enabled-run-configurations>
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -85,6 +88,7 @@
     "Gradle.CollectionTests.listTests.executor": "Run",
     "Gradle.ContactTests (1).executor": "Run",
     "Gradle.ContactTests.executor": "Debug",
+    "Gradle.GroupCreationTests (1).executor": "Debug",
     "Gradle.GroupCreationTests.canCreateGroup.executor": "Run",
     "Gradle.GroupCreationTests.canCreateGroupWithNameOnly.executor": "Debug",
     "Gradle.GroupCreationTests.canCreateMultipleGroups.executor": "Run",
@@ -97,6 +101,7 @@
     "Gradle.SquareTests.canCalculatePerimeter.executor": "Run",
     "Gradle.SquareTests.executor": "Run",
     "Gradle.Tests in 'tests'.executor": "Debug",
+    "Gradle.java_for_testers:addressbook_web_tests [:addressbook_web_tests:ru.stqa.addressbook.generator.Generator.main()].executor": "Run",
     "Gradle.java_for_testers:sandbox [:sandbox:Geomertry.main()].executor": "Run",
     "Gradle.java_for_testers:sandbox [:sandbox:Hello.main()].executor": "Run",
     "Gradle.java_for_testers:sandbox [:sandbox:ru.stqa.geometry.Geometry.main()].executor": "Run",
@@ -129,16 +134,25 @@
       <recent name="C:\Users\tanya\IdeaProjects\java_for_testers\addressbook_web_tests\src\test\resources\images" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="ru.stqa.addressbook.common.Common" />
       <recent name="ApplicationManager" />
       <recent name="TestBase" />
       <recent name="Square" />
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ContactTests (1)">
-    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Hello" />
-      <module name="java_for_testers.sandbox.main" />
+  <component name="RunManager" selected="Gradle.GroupCreationTests (1)">
+    <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.addressbook.generator.Generator" />
+      <module name="java_for_testers.addressbook_web_tests.test" />
+      <option name="PROGRAM_PARAMETERS" value="--type groups --output groups.json --format json --count 3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/addressbook_web_tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.addressbook.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -191,6 +205,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="GroupCreationTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":addressbook_web_tests:test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.addressbook.tests.GroupCreationTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="GroupCreationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -215,44 +253,20 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GroupRemovalTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="-Pbrowser=chrome" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":addressbook_web_tests:test" />
-            <option value="--tests" />
-            <option value="&quot;tests.GroupRemovalTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Application.Hello" />
+      <item itemvalue="Application.Generator" />
+      <item itemvalue="Gradle.GroupCreationTests (1)" />
       <item itemvalue="Gradle.ContactTests (1)" />
       <item itemvalue="Gradle.ContactTests" />
       <item itemvalue="Gradle.GroupCreationTests" />
-      <item itemvalue="Gradle.GroupRemovalTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GroupCreationTests (1)" />
+        <item itemvalue="Gradle.GroupCreationTests" />
+        <item itemvalue="Application.Generator" />
         <item itemvalue="Gradle.ContactTests (1)" />
         <item itemvalue="Gradle.ContactTests" />
-        <item itemvalue="Application.Hello" />
-        <item itemvalue="Gradle.GroupCreationTests" />
-        <item itemvalue="Gradle.GroupRemovalTests" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737476055648</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="workspace xml changes">
+      <option name="closed" value="true" />
+      <created>1737476126734</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737476126734</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -305,7 +327,8 @@
     <MESSAGE value="Geometry - выполнена структуризация кода" />
     <MESSAGE value="lessons 1-4" />
     <MESSAGE value="ru.stqa.addressbook package added" />
-    <option name="LAST_COMMIT_MESSAGE" value="ru.stqa.addressbook package added" />
+    <MESSAGE value="workspace xml changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace xml changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -326,14 +349,24 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="18" />
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/generator/Generator.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/generator/Generator.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java</url>
-          <line>86</line>
-          <option name="timeStamp" value="19" />
+          <line>72</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/sandbox/src/main/java/Hello.java</url>
@@ -346,5 +379,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="group" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
