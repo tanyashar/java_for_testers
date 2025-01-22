@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Generator {
-    // Generator - запускаемый класс, поэтому внутри него будет функция main
+    // Generator - запускаемый класс (runnable class), поэтому внутри него будет функция main
     // args - аргументы (= опции) командной строки = аргументы запуска программы
     // Edit Configurations - Program arguments: --type groups --output groups.json --format json --count 3
 

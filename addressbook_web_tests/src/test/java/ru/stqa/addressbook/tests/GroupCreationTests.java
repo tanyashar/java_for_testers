@@ -73,7 +73,7 @@ public class GroupCreationTests extends TestBase {
 
         // ИЛИ
         // var value = mapper.readValue(new File("groups.json"), new TypeReference<List<GroupData>>() {});
-        // result.addAll(value);
+         result.addAll(value);
         return result;
     }
 
