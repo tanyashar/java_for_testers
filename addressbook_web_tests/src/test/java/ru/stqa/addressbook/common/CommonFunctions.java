@@ -2,7 +2,7 @@ package ru.stqa.addressbook.common;
 
 import java.util.Random;
 
-public class Common {
+public class CommonFunctions {
     public static String randomString(int stringLength) {
         var rnd = new Random(); // тип данных для рандомных чисел
         var result = "";
