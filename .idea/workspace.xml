@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="Hibernate for DB - create and get count">
-      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/hbm/ContactRecord.java" afterDir="false" />
+    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="Hibernate for DB - work with contact and group tables - связи между таблицами">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HibernateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HibernateHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/hbm/GroupRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/hbm/GroupRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/JdbcHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/JdbcHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +86,7 @@
     "Gradle.CollectionTests.executor": "Run",
     "Gradle.CollectionTests.listTests.executor": "Run",
     "Gradle.ContactTests (1).executor": "Run",
-    "Gradle.ContactTests.canCreateContactInGroup.executor": "Debug",
+    "Gradle.ContactTests.canCreateContactInGroup.executor": "Run",
     "Gradle.ContactTests.executor": "Debug",
     "Gradle.GroupCreationTests (1).executor": "Debug",
     "Gradle.GroupCreationTests.canCreateGroup.executor": "Run",
@@ -380,7 +377,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737648769341</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Hibernate for DB - work with contact and group tables - связи между таблицами">
+      <option name="closed" value="true" />
+      <created>1737654910750</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1737654910750</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -395,7 +400,8 @@
     <MESSAGE value="update GroupCreationTests so that it works" />
     <MESSAGE value="Hibernate for DB - introduction" />
     <MESSAGE value="Hibernate for DB - create and get count" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hibernate for DB - create and get count" />
+    <MESSAGE value="Hibernate for DB - work with contact and group tables - связи между таблицами" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hibernate for DB - work with contact and group tables - связи между таблицами" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

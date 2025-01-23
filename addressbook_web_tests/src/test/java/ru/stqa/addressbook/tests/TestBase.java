@@ -1,5 +1,6 @@
 package ru.stqa.addressbook.tests;
 
+import org.junit.jupiter.api.AfterEach;
 import ru.stqa.addressbook.manager.ApplicationManager;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -45,5 +46,12 @@ public class TestBase {
         var rnd = new Random();
         var index = rnd.nextInt(fileNames.length);
         return Paths.get(dir, fileNames[index]).toString();
+    }
+
+    @AfterEach
+    public void checkDataBaseConsistency() {
+        // проверяем согласованность БД = проверка БД на консистентность
+        // нельзя сделать через hibernate, поэтому используем jdbc
+        app.jdbc().checkConsistency();
     }
 }
