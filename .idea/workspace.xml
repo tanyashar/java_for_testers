@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="Hibernate for DB - introduction">
+    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="Hibernate for DB - create and get count">
+      <change afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/hbm/ContactRecord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/GroupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/GroupHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HibernateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HibernateHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/hbm/GroupRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/hbm/GroupRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupModificationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupRemovalTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupRemovalTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +89,7 @@
     "Gradle.CollectionTests.executor": "Run",
     "Gradle.CollectionTests.listTests.executor": "Run",
     "Gradle.ContactTests (1).executor": "Run",
+    "Gradle.ContactTests.canCreateContactInGroup.executor": "Debug",
     "Gradle.ContactTests.executor": "Debug",
     "Gradle.GroupCreationTests (1).executor": "Debug",
     "Gradle.GroupCreationTests.canCreateGroup.executor": "Run",
@@ -144,23 +145,8 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GroupModificationTests">
-    <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.addressbook.generator.Generator" />
-      <module name="java_for_testers.addressbook_web_tests.test" />
-      <option name="PROGRAM_PARAMETERS" value="--type groups --output groups.xml --format xml --count 3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/addressbook_web_tests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.addressbook.generator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GroupCreationTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ContactTests.canCreateContactInGroup">
+    <configuration name="ContactTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -173,7 +159,31 @@
           <list>
             <option value=":addressbook_web_tests:test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.addressbook.tests.GroupCreationTests&quot;" />
+            <option value="&quot;ru.stqa.addressbook.tests.ContactTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ContactTests.canCreateContactInGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":addressbook_web_tests:test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.addressbook.tests.ContactTests.canCreateContactInGroup&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -257,19 +267,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Generator" />
+      <item itemvalue="Gradle.ContactTests" />
+      <item itemvalue="Gradle.ContactTests.canCreateContactInGroup" />
       <item itemvalue="Gradle.GroupRemovalTests.canRemoveAllGroupsAtOnce" />
       <item itemvalue="Gradle.GroupRemovalTests" />
       <item itemvalue="Gradle.GroupModificationTests" />
-      <item itemvalue="Gradle.GroupCreationTests (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ContactTests.canCreateContactInGroup" />
+        <item itemvalue="Gradle.ContactTests" />
         <item itemvalue="Gradle.GroupModificationTests" />
         <item itemvalue="Gradle.GroupRemovalTests" />
         <item itemvalue="Gradle.GroupRemovalTests.canRemoveAllGroupsAtOnce" />
-        <item itemvalue="Gradle.GroupCreationTests (1)" />
-        <item itemvalue="Application.Generator" />
       </list>
     </recent_temporary>
   </component>
@@ -362,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737644193784</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Hibernate for DB - create and get count">
+      <option name="closed" value="true" />
+      <created>1737648769341</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1737648769341</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -376,7 +394,8 @@
     <MESSAGE value="run app with properties config-file" />
     <MESSAGE value="update GroupCreationTests so that it works" />
     <MESSAGE value="Hibernate for DB - introduction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hibernate for DB - introduction" />
+    <MESSAGE value="Hibernate for DB - create and get count" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hibernate for DB - create and get count" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -435,6 +454,16 @@
           <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupRemovalTests.java</url>
           <line>35</line>
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HibernateHelper.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/sandbox/src/main/java/Hello.java</url>

@@ -1,12 +1,10 @@
 package ru.stqa.addressbook.manager.hbm;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.List;
 
 // библиотека Hibernate не умеет работать с record (с неизменяемыми свойствами), ей нужны изменяемые свойства - т.е. class
 // поэтому создаем обертку GroupRecord
@@ -28,6 +26,18 @@ public class GroupRecord {
     public String footer;
 
     public Date deprecated = new Date();
+
+    // описание связей между объектами в декларативном виде
+    // тип связи @ManyToMany = контакт может входить в несколько групп + группа может содержать несколько контактов
+    // hibernate информацию об объектах загружает сразу (EAGER), но о связях - как можно позже (LAZY)
+    // чтобы это изменить, можно принудительно задать параметр: @ManyToMany(fetch = FetchType.EAGER)
+    // @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany
+    @JoinTable(name = "address_in_groups",
+            joinColumns = @JoinColumn(name = "group_id"),
+            inverseJoinColumns = @JoinColumn(name = "id")
+    )
+    public List<ContactRecord> contacts;
 
     public GroupRecord() { }
 
