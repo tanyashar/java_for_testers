@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="множества (Set, HashSet)">
-      <change afterPath="$PROJECT_DIR$/sandbox/src/test/java/ru/stqa/ReverseChecks.java" afterDir="false" />
+    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="обратные (обходные) проверки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HibernateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HibernateHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/hbm/ContactRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/hbm/ContactRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/model/ContactData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/model/ContactData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/src/test/java/ru/stqa/collections/CollectionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/test/java/ru/stqa/collections/CollectionTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +87,7 @@
     "Gradle.CollectionTests.executor": "Run",
     "Gradle.CollectionTests.listTests.executor": "Run",
     "Gradle.CollectionTests.setTests.executor": "Debug",
+    "Gradle.CollectionTests.testMap.executor": "Run",
     "Gradle.ContactTests (1).executor": "Run",
     "Gradle.ContactTests.TestPhones.executor": "Run",
     "Gradle.ContactTests.canCreateContactInGroup.executor": "Run",
@@ -152,6 +150,30 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.ContactTests.TestPhones">
+    <configuration name="CollectionTests.testMap" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":sandbox:test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.collections.CollectionTests.testMap&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="ContactTests.TestPhones" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -166,30 +188,6 @@
             <option value=":addressbook_web_tests:test" />
             <option value="--tests" />
             <option value="&quot;ru.stqa.addressbook.tests.ContactTests.TestPhones&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="GroupCreationTests.canCreateMultipleGroupsWithDifferentNames" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":addressbook_web_tests:test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.addressbook.tests.GroupCreationTests.canCreateMultipleGroupsWithDifferentNames&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -273,19 +271,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.CollectionTests.testMap" />
       <item itemvalue="Gradle.ContactTests.TestPhones" />
       <item itemvalue="Gradle.GroupRemovalTests.canRemoveAllGroupsAtOnce" />
       <item itemvalue="Gradle.ReverseChecks.testSort" />
       <item itemvalue="Gradle.ReverseChecks.testSqrt" />
-      <item itemvalue="Gradle.GroupCreationTests.canCreateMultipleGroupsWithDifferentNames" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ContactTests.TestPhones" />
+        <item itemvalue="Gradle.CollectionTests.testMap" />
         <item itemvalue="Gradle.GroupRemovalTests.canRemoveAllGroupsAtOnce" />
         <item itemvalue="Gradle.ReverseChecks.testSort" />
         <item itemvalue="Gradle.ReverseChecks.testSqrt" />
-        <item itemvalue="Gradle.GroupCreationTests.canCreateMultipleGroupsWithDifferentNames" />
       </list>
     </recent_temporary>
   </component>
@@ -418,7 +416,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737995133526</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="обратные (обходные) проверки">
+      <option name="closed" value="true" />
+      <created>1738000691937</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1738000691937</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -437,7 +443,8 @@
     <MESSAGE value="checkConsistency - проверка БД на согласованность" />
     <MESSAGE value="функциональное программирование - consumers (потребители), suppliers (генераторы), functions (трансформеры)" />
     <MESSAGE value="множества (Set, HashSet)" />
-    <option name="LAST_COMMIT_MESSAGE" value="множества (Set, HashSet)" />
+    <MESSAGE value="обратные (обходные) проверки" />
+    <option name="LAST_COMMIT_MESSAGE" value="обратные (обходные) проверки" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -502,7 +509,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/sandbox/src/test/java/ru/stqa/collections/CollectionTests.java</url>
-          <line>71</line>
+          <line>68</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -517,8 +524,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="52" />
+          <line>78</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/sandbox/src/main/java/Hello.java</url>
@@ -537,15 +544,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java</url>
-          <line>65</line>
-          <properties class="ru.stqa.addressbook.tests.ContactTests" method="TestPhones">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -66,14 +66,16 @@ public class ContactTests extends TestBase{
     void TestPhones() {
         // Метод обратных/обходных проверок
         var contacts = app.hbm().getContactList();
-        var contact = contacts.get(0);
-        var phones = app.contacts().getPhones(contact);
 
-        var expected = Stream.of(contact.home(), contact.mobile(), contact.work(), contact.secondary())
-                .filter(s -> s != null && !"".equals(s))
-                .collect(Collectors.joining("\n"));
+        // Получить словарь из стрима с помощью toMap(x -> Key, x -> Value)
+        var expected = contacts.stream()
+                .collect(Collectors.toMap(ContactData::id,
+                        contact -> Stream.of(contact.home(), contact.mobile(), contact.work(), contact.secondary())
+                                .filter(s -> s != null && !"".equals(s))
+                                .collect(Collectors.joining("\n"))));
+
+        var phones = app.contacts().getPhones();
 
         Assertions.assertEquals(expected, phones);
     }
-    
 }
