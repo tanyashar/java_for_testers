@@ -7,12 +7,17 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
 import ru.stqa.addressbook.common.CommonFunctions;
+import ru.stqa.addressbook.model.ContactData;
 import ru.stqa.addressbook.model.GroupData;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Generator {
     // Generator - запускаемый класс (runnable class), поэтому внутри него будет функция main
@@ -96,19 +101,27 @@ public class Generator {
             throw new IllegalArgumentException("Неизвестный тип данных " + type);
     }
 
+    private Object generateData(Supplier<Object> dataSupplier) {
+        return Stream
+                .generate(dataSupplier)
+                .limit(count)
+                .collect(Collectors.toList());
+    }
+
     private Object generateContact() {
-        return null;
+        return generateData(() -> new ContactData()
+                .withFirstName(CommonFunctions.randomString(10))
+                .withLastName(CommonFunctions.randomString(10))
+        );
     }
 
     private Object generateGroup() {
-        var result = new ArrayList<GroupData>();
-        for (int i = 0; i < 5; i++) {
-            result.add(new GroupData()
-                    .withName(CommonFunctions.randomString(i * 10))
-                    .withHeader(CommonFunctions.randomString(i * 10))
-                    .withFooter(CommonFunctions.randomString(i * 10)));
-        }
-
-        return result;
+        Supplier<Object> supplier =
+          () -> new GroupData()
+                .withName(CommonFunctions.randomString(10))
+                .withHeader(CommonFunctions.randomString(10))
+                .withFooter(CommonFunctions.randomString(10))
+        ;
+        return generateData(supplier);
     }
 }

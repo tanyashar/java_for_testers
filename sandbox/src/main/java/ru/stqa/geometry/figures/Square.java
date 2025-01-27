@@ -16,13 +16,17 @@ public record Square(double side) {
         // this.side = side;
     // }
 
-    public static void printSquareArea(Square s){
+    public static void printArea(Square s){
         String text = String.format("Площадь квадрата со стороной %f = %f", s.side, s.area());
         System.out.println(text);
     }
 
     public static double area(double a) {
         return a * a;
+    }
+
+    public static void printPerimeter(Square square) {
+        System.out.println(square.side * 4);
     }
 
     public double area() {

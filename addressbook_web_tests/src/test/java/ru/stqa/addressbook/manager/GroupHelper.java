@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class GroupHelper extends HelperBase{
 
@@ -96,21 +98,21 @@ public class GroupHelper extends HelperBase{
     }
 
     private static void selectAllGroups(List<WebElement> checkboxes) {
-        for (var checkbox: checkboxes) {
-            checkbox.click();
-        }
+        checkboxes.forEach(WebElement::click);
     }
 
     public List<GroupData> getList() {
         openGroupsPage();
         var groups = new ArrayList<GroupData>();
         var spans = manager.driver.findElements(By.cssSelector("span.group")); // элементы с тегом span, к-е имеют класс group
-        for (var span: spans) {
-            var name = span.getText();
-            var checkBox = span.findElement(By.name("selected[]"));
-            var id = checkBox.getAttribute("value");
-            groups.add(new GroupData().withId(id).withName(name));
-        }
-        return groups;
+
+        return spans.stream()
+                .map(span -> {
+                    var name = span.getText();
+                    var checkBox = span.findElement(By.name("selected[]"));
+                    var id = checkBox.getAttribute("value");
+                    return new GroupData().withId(id).withName(name);
+                })
+                .collect(Collectors.toList());
     }
 }

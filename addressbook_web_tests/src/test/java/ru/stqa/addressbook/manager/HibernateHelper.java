@@ -1,16 +1,16 @@
 package ru.stqa.addressbook.manager;
 
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AvailableSettings;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.tool.schema.Action;
 import ru.stqa.addressbook.manager.hbm.ContactRecord;
 import ru.stqa.addressbook.manager.hbm.GroupRecord;
 import ru.stqa.addressbook.model.ContactData;
 import ru.stqa.addressbook.model.GroupData;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class HibernateHelper extends HelperBase {
     private SessionFactory sessionFactory;
@@ -29,20 +29,16 @@ public class HibernateHelper extends HelperBase {
 
     }
 
-    static List<GroupData> convertList(List<GroupRecord> records) {
-        List<GroupData> result = new ArrayList<>();
-        for (var record: records) {
-            result.add(convert(record));
-        }
-        return result;
+    static List<GroupData> convertGroupList(List<GroupRecord> records) {
+        return records.stream()
+                .map(HibernateHelper::convert) // .map(g -> convert(g))
+                .collect(Collectors.toList());
     }
 
     static List<ContactData> convertContactList(List<ContactRecord> records) {
-        List<ContactData> result = new ArrayList<>();
-        for (var record: records) {
-            result.add(convert(record));
-        }
-        return result;
+        return records.stream()
+                .map(HibernateHelper::convert)
+                .collect(Collectors.toList());
     }
 
     private static ContactData convert(ContactRecord record) {
@@ -70,7 +66,7 @@ public class HibernateHelper extends HelperBase {
 
     public List<GroupData> getGroupList() {
         // запрос на языке OQL = Object Query Language
-        return convertList(sessionFactory.fromSession(session -> {
+        return convertGroupList(sessionFactory.fromSession(session -> {
             return session.createQuery("from GroupRecord", GroupRecord.class).list();
         }));
     }
