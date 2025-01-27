@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Random;
+import java.util.Set;
 
 public class GroupModificationTests extends TestBase {
 
@@ -28,6 +29,8 @@ public class GroupModificationTests extends TestBase {
         var expectedList = new ArrayList<>(oldGroups);
         expectedList.set(index, testData.withId(oldGroups.get(index).id()));
 
+
+        //region Сравнить два списка с помощью компаратора
         // comparator - комапаратор - анонимная функция, характерно для функционального программирования
         // т.е. в функцию можно передавать другую функцию
         Comparator<GroupData> compareById = (o1, o2) -> {
@@ -38,5 +41,11 @@ public class GroupModificationTests extends TestBase {
         expectedList.sort(compareById);
 
         Assertions.assertEquals(newGroups, expectedList);
+        //endregion
+
+        // ИЛИ
+        //region Сравнить два множества (т.е. неупорядоченных списка)
+        Assertions.assertEquals(Set.copyOf(newGroups), Set.copyOf(expectedList));
+        //endregion
     }
 }

@@ -4,7 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class CollectionTests {
     @Test
@@ -28,9 +30,9 @@ public class CollectionTests {
         // var list = List.of("a", "b", "c");
 
         // предзаполненный и изменяемый список
-        var list = new ArrayList<>(List.of("a", "b", "c"));
+        var list = new ArrayList<>(List.of("a", "b", "c", "a"));
 
-        Assertions.assertEquals(3, list.size()); // список имеет переменную длину
+        Assertions.assertEquals(4, list.size()); // список имеет переменную длину
 
         list.add("a");
         list.add("b");
@@ -41,4 +43,32 @@ public class CollectionTests {
         list.set(0, "d");
         Assertions.assertEquals("d", list.get(0));
     }
+
+    @Test
+    void setTests() {
+        // set = множество, неупорядоченный список, БЕЗ повторяющихся элементов
+        // если элемент повторяется - IllegalArgumentException: duplicate element
+
+        // немодифицируемый сет (неизменямый)
+        var unmodifiableSet = Set.of("a", "b", "c");
+        Assertions.assertEquals(3, unmodifiableSet.size());
+        // unmodifiableSet.add("a"); // выдаст ошибку UnsupportedOperationException = нельзя добавлять элементы
+
+        // изменяемый сет
+        var modifiableSet = new HashSet<>(Set.of("a", "b", "c"));
+        modifiableSet.add("c");
+        Assertions.assertEquals(3, modifiableSet.size());
+
+        modifiableSet.add("d");
+        Assertions.assertEquals(4, modifiableSet.size());
+
+        var set = Set.copyOf(List.of("a", "b", "c", "a"));
+        Assertions.assertEquals(3, set.size());
+
+        // получить элемент множества
+        var randomElementWithArray = set.toArray()[0];
+        var randomElementWithIterator = set.iterator().next();
+        var randomElementWithStream = set.stream().findAny().get();
+    }
+
 }

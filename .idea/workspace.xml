@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="checkConsistency - проверка БД на согласованность">
+    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="функциональное программирование - consumers (потребители), suppliers (генераторы), functions (трансформеры)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/common/CommonFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/common/CommonFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/generator/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/generator/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/GroupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/GroupHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HibernateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HibernateHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/geometry/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/geometry/Geometry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/geometry/figures/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/main/java/ru/stqa/geometry/figures/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupModificationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/src/test/java/ru/stqa/collections/CollectionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/test/java/ru/stqa/collections/CollectionTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +86,7 @@
     "Gradle.CollectionTests.arrayTests.executor": "Run",
     "Gradle.CollectionTests.executor": "Run",
     "Gradle.CollectionTests.listTests.executor": "Run",
+    "Gradle.CollectionTests.setTests.executor": "Debug",
     "Gradle.ContactTests (1).executor": "Run",
     "Gradle.ContactTests.canCreateContactInGroup.executor": "Run",
     "Gradle.ContactTests.executor": "Debug",
@@ -97,7 +94,7 @@
     "Gradle.GroupCreationTests.canCreateGroup.executor": "Run",
     "Gradle.GroupCreationTests.canCreateGroupWithNameOnly.executor": "Debug",
     "Gradle.GroupCreationTests.canCreateMultipleGroups.executor": "Run",
-    "Gradle.GroupCreationTests.canCreateMultipleGroupsWithDifferentNames.executor": "Debug",
+    "Gradle.GroupCreationTests.canCreateMultipleGroupsWithDifferentNames.executor": "Run",
     "Gradle.GroupCreationTests.executor": "Run",
     "Gradle.GroupModificationTests.canModifyGroup.executor": "Debug",
     "Gradle.GroupModificationTests.executor": "Run",
@@ -162,7 +159,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CollectionTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -173,9 +170,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":addressbook_web_tests:test" />
+            <option value=":sandbox:test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.addressbook.tests.ContactTests&quot;" />
+            <option value="&quot;ru.stqa.collections.CollectionTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -186,7 +183,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ContactTests.canCreateContactInGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CollectionTests.setTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -197,9 +194,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":addressbook_web_tests:test" />
+            <option value=":sandbox:test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.addressbook.tests.ContactTests.canCreateContactInGroup&quot;" />
+            <option value="&quot;ru.stqa.collections.CollectionTests.setTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -234,7 +231,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GroupModificationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GroupModificationTests.canModifyGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -247,7 +244,7 @@
           <list>
             <option value=":addressbook_web_tests:test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.addressbook.tests.GroupModificationTests&quot;" />
+            <option value="&quot;ru.stqa.addressbook.tests.GroupModificationTests.canModifyGroup&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -260,18 +257,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Geometry" />
+      <item itemvalue="Gradle.CollectionTests" />
+      <item itemvalue="Gradle.CollectionTests.setTests" />
+      <item itemvalue="Gradle.GroupModificationTests.canModifyGroup" />
       <item itemvalue="Gradle.GroupCreationTests.canCreateMultipleGroupsWithDifferentNames" />
-      <item itemvalue="Gradle.ContactTests" />
-      <item itemvalue="Gradle.ContactTests.canCreateContactInGroup" />
-      <item itemvalue="Gradle.GroupModificationTests" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.GroupCreationTests.canCreateMultipleGroupsWithDifferentNames" />
+        <item itemvalue="Gradle.GroupModificationTests.canModifyGroup" />
+        <item itemvalue="Gradle.CollectionTests.setTests" />
+        <item itemvalue="Gradle.CollectionTests" />
         <item itemvalue="Application.Geometry" />
-        <item itemvalue="Gradle.ContactTests.canCreateContactInGroup" />
-        <item itemvalue="Gradle.ContactTests" />
-        <item itemvalue="Gradle.GroupModificationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -388,7 +385,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737656120504</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="функциональное программирование - consumers (потребители), suppliers (генераторы), functions (трансформеры)">
+      <option name="closed" value="true" />
+      <created>1737992960462</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1737992960462</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -405,7 +410,8 @@
     <MESSAGE value="Hibernate for DB - create and get count" />
     <MESSAGE value="Hibernate for DB - work with contact and group tables - связи между таблицами" />
     <MESSAGE value="checkConsistency - проверка БД на согласованность" />
-    <option name="LAST_COMMIT_MESSAGE" value="checkConsistency - проверка БД на согласованность" />
+    <MESSAGE value="функциональное программирование - consumers (потребители), suppliers (генераторы), functions (трансформеры)" />
+    <option name="LAST_COMMIT_MESSAGE" value="функциональное программирование - consumers (потребители), suppliers (генераторы), functions (трансформеры)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -419,11 +425,6 @@
           <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/GroupHelper.java</url>
           <line>36</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupModificationTests.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/generator/Generator.java</url>
@@ -442,13 +443,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java</url>
-          <line>75</line>
+          <line>76</line>
           <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java</url>
-          <line>109</line>
-          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/GroupHelper.java</url>
@@ -478,6 +474,21 @@
           </properties>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sandbox/src/test/java/ru/stqa/collections/CollectionTests.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupModificationTests.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupModificationTests.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/sandbox/src/main/java/Hello.java</url>
           <line>3</line>
@@ -489,7 +500,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java</url>
-          <line>104</line>
+          <line>105</line>
           <properties class="ru.stqa.addressbook.tests.GroupCreationTests" method="canCreateMultipleGroupsWithDifferentNames">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
