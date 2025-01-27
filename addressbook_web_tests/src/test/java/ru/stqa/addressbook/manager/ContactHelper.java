@@ -95,4 +95,8 @@ public class ContactHelper extends HelperBase {
     }
 
 
+    public String getPhones(ContactData contact) {
+        return manager.driver.findElement(By.xpath(
+                String.format("//input[@id='%s']/../../td[6]", contact.id()))).getText();
+    }
 }

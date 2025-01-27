@@ -14,6 +14,10 @@ public class ContactRecord {
     public String firstname;
     public String lastName;
     public String address;
+    public String home;
+    public String mobile;
+    public String work;
+    public String phone2; // название поле как в БД
 
     public ContactRecord() { }
     public ContactRecord(int id, String firstname, String lastName, String address) {

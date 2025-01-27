@@ -9,6 +9,8 @@ import ru.stqa.addressbook.model.GroupData;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ContactTests extends TestBase{
     public static ArrayList<ContactData> contactGroupProvider() {
@@ -58,6 +60,20 @@ public class ContactTests extends TestBase{
 
         var newRelated = app.hbm().getContactsInGroup(group);
         Assertions.assertEquals(oldRelated.size() + 1, newRelated.size());
+    }
+
+    @Test
+    void TestPhones() {
+        // Метод обратных/обходных проверок
+        var contacts = app.hbm().getContactList();
+        var contact = contacts.get(0);
+        var phones = app.contacts().getPhones(contact);
+
+        var expected = Stream.of(contact.home(), contact.mobile(), contact.work(), contact.secondary())
+                .filter(s -> s != null && !"".equals(s))
+                .collect(Collectors.joining("\n"));
+
+        Assertions.assertEquals(expected, phones);
     }
     
 }

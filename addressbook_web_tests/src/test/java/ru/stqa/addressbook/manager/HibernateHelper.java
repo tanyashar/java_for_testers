@@ -7,10 +7,9 @@ import ru.stqa.addressbook.manager.hbm.ContactRecord;
 import ru.stqa.addressbook.manager.hbm.GroupRecord;
 import ru.stqa.addressbook.model.ContactData;
 import ru.stqa.addressbook.model.GroupData;
-import java.util.ArrayList;
+
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class HibernateHelper extends HelperBase {
     private SessionFactory sessionFactory;
@@ -45,7 +44,11 @@ public class HibernateHelper extends HelperBase {
         return new ContactData().withId("" + record.id)
                 .withFirstName(record.firstname)
                 .withLastName(record.lastName)
-                .withAddress(record.address);
+                .withAddress(record.address)
+                .withHome(record.home)
+                .withMobile(record.mobile)
+                .withWork(record.work)
+                .withSecondary(record.phone2);
     }
 
     private static ContactRecord convert(ContactData contactData) {
@@ -91,6 +94,12 @@ public class HibernateHelper extends HelperBase {
         return sessionFactory.fromSession(session -> {
             return convertContactList(session.get(GroupRecord.class, group.id()).contacts);
         });
+    }
+
+    public List<ContactData> getContactList() {
+        return convertContactList(sessionFactory.fromSession(session -> {
+            return session.createQuery("from ContactRecord", ContactRecord.class).list();
+        }));
     }
 }
 

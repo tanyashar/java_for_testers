@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="функциональное программирование - consumers (потребители), suppliers (генераторы), functions (трансформеры)">
+    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="множества (Set, HashSet)">
+      <change afterPath="$PROJECT_DIR$/sandbox/src/test/java/ru/stqa/ReverseChecks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupModificationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sandbox/src/test/java/ru/stqa/collections/CollectionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/test/java/ru/stqa/collections/CollectionTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ContactHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HibernateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HibernateHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/hbm/ContactRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/hbm/ContactRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/model/ContactData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/model/ContactData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +91,7 @@
     "Gradle.CollectionTests.listTests.executor": "Run",
     "Gradle.CollectionTests.setTests.executor": "Debug",
     "Gradle.ContactTests (1).executor": "Run",
+    "Gradle.ContactTests.TestPhones.executor": "Run",
     "Gradle.ContactTests.canCreateContactInGroup.executor": "Run",
     "Gradle.ContactTests.executor": "Debug",
     "Gradle.GroupCreationTests (1).executor": "Debug",
@@ -98,9 +102,11 @@
     "Gradle.GroupCreationTests.executor": "Run",
     "Gradle.GroupModificationTests.canModifyGroup.executor": "Debug",
     "Gradle.GroupModificationTests.executor": "Run",
-    "Gradle.GroupRemovalTests.canRemoveAllGroupsAtOnce.executor": "Debug",
+    "Gradle.GroupRemovalTests.canRemoveAllGroupsAtOnce.executor": "Run",
     "Gradle.GroupRemovalTests.canRemoveGroup.executor": "Debug",
     "Gradle.GroupRemovalTests.executor": "Debug",
+    "Gradle.ReverseChecks.testSort.executor": "Run",
+    "Gradle.ReverseChecks.testSqrt.executor": "Run",
     "Gradle.SquareTests.canCalculateArea.executor": "Run",
     "Gradle.SquareTests.canCalculatePerimeter.executor": "Run",
     "Gradle.SquareTests.executor": "Run",
@@ -145,21 +151,8 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GroupCreationTests.canCreateMultipleGroupsWithDifferentNames">
-    <configuration name="Geometry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.geometry.Geometry" />
-      <module name="java_for_testers.sandbox.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.geometry.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CollectionTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ContactTests.TestPhones">
+    <configuration name="ContactTests.TestPhones" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -170,33 +163,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":sandbox:test" />
+            <option value=":addressbook_web_tests:test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.collections.CollectionTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="CollectionTests.setTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":sandbox:test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.collections.CollectionTests.setTests&quot;" />
+            <option value="&quot;ru.stqa.addressbook.tests.ContactTests.TestPhones&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -231,7 +200,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GroupModificationTests.canModifyGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GroupRemovalTests.canRemoveAllGroupsAtOnce" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -244,7 +213,55 @@
           <list>
             <option value=":addressbook_web_tests:test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.addressbook.tests.GroupModificationTests.canModifyGroup&quot;" />
+            <option value="&quot;ru.stqa.addressbook.tests.GroupRemovalTests.canRemoveAllGroupsAtOnce&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ReverseChecks.testSort" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":sandbox:test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.ReverseChecks.testSort&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ReverseChecks.testSqrt" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":sandbox:test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.ReverseChecks.testSqrt&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -256,19 +273,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Geometry" />
-      <item itemvalue="Gradle.CollectionTests" />
-      <item itemvalue="Gradle.CollectionTests.setTests" />
-      <item itemvalue="Gradle.GroupModificationTests.canModifyGroup" />
+      <item itemvalue="Gradle.ContactTests.TestPhones" />
+      <item itemvalue="Gradle.GroupRemovalTests.canRemoveAllGroupsAtOnce" />
+      <item itemvalue="Gradle.ReverseChecks.testSort" />
+      <item itemvalue="Gradle.ReverseChecks.testSqrt" />
       <item itemvalue="Gradle.GroupCreationTests.canCreateMultipleGroupsWithDifferentNames" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ContactTests.TestPhones" />
+        <item itemvalue="Gradle.GroupRemovalTests.canRemoveAllGroupsAtOnce" />
+        <item itemvalue="Gradle.ReverseChecks.testSort" />
+        <item itemvalue="Gradle.ReverseChecks.testSqrt" />
         <item itemvalue="Gradle.GroupCreationTests.canCreateMultipleGroupsWithDifferentNames" />
-        <item itemvalue="Gradle.GroupModificationTests.canModifyGroup" />
-        <item itemvalue="Gradle.CollectionTests.setTests" />
-        <item itemvalue="Gradle.CollectionTests" />
-        <item itemvalue="Application.Geometry" />
       </list>
     </recent_temporary>
   </component>
@@ -393,7 +410,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737992960462</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="множества (Set, HashSet)">
+      <option name="closed" value="true" />
+      <created>1737995133526</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1737995133526</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -411,7 +436,8 @@
     <MESSAGE value="Hibernate for DB - work with contact and group tables - связи между таблицами" />
     <MESSAGE value="checkConsistency - проверка БД на согласованность" />
     <MESSAGE value="функциональное программирование - consumers (потребители), suppliers (генераторы), functions (трансформеры)" />
-    <option name="LAST_COMMIT_MESSAGE" value="функциональное программирование - consumers (потребители), suppliers (генераторы), functions (трансформеры)" />
+    <MESSAGE value="множества (Set, HashSet)" />
+    <option name="LAST_COMMIT_MESSAGE" value="множества (Set, HashSet)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -458,12 +484,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java</url>
-          <line>56</line>
+          <line>58</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HibernateHelper.java</url>
-          <line>90</line>
+          <line>93</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -489,6 +515,11 @@
           <line>42</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/sandbox/src/main/java/Hello.java</url>
           <line>3</line>
@@ -499,13 +530,22 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/GroupCreationTests.java</url>
-          <line>105</line>
-          <properties class="ru.stqa.addressbook.tests.GroupCreationTests" method="canCreateMultipleGroupsWithDifferentNames">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/HibernateHelper.java</url>
+          <line>82</line>
+          <properties class="ru.stqa.addressbook.manager.HibernateHelper" method="createGroup">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="40" />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/tests/ContactTests.java</url>
+          <line>65</line>
+          <properties class="ru.stqa.addressbook.tests.ContactTests" method="TestPhones">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
