@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="словари HashMap (ассоциативные массивы)">
-      <change afterPath="$PROJECT_DIR$/mantis_tests/local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/ApplicationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/HelperBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/HttpSessionHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/SessionHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/LoginTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="Http client, Http POST/GET requests">
+      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/common/CommonFunctions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/JamesCliHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/JamesTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis_tests/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mantis_tests/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/ApplicationManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +105,7 @@
     "Gradle.GroupRemovalTests.canRemoveAllGroupsAtOnce.executor": "Run",
     "Gradle.GroupRemovalTests.canRemoveGroup.executor": "Debug",
     "Gradle.GroupRemovalTests.executor": "Debug",
+    "Gradle.JamesTests.canCreateUser.executor": "Run",
     "Gradle.LoginTests.canLogin.executor": "Run",
     "Gradle.LoginTests.executor": "Run",
     "Gradle.ReverseChecks.testSort.executor": "Run",
@@ -138,7 +135,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/tanya/IdeaProjects/java_for_testers/mantis_tests",
+    "last_opened_file_path": "C:/Users/tanya/IdeaProjects/java_for_testers/mantis_tests/src/test/java/ru/stqa/mantis",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
@@ -147,6 +144,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tanya\IdeaProjects\java_for_testers\mantis_tests\src\test\java\ru\stqa\mantis" />
       <recent name="C:\Users\tanya\IdeaProjects\java_for_testers\mantis_tests" />
       <recent name="C:\Users\tanya\IdeaProjects\java_for_testers\addressbook_web_tests\src\test\resources\images" />
     </key>
@@ -158,7 +156,7 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LoginTests">
+  <component name="RunManager" selected="Gradle.JamesTests.canCreateUser">
     <configuration name="CollectionTests.testMap" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -207,7 +205,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GroupRemovalTests.canRemoveAllGroupsAtOnce" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JamesTests.canCreateUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -218,9 +216,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":addressbook_web_tests:test" />
+            <option value=":mantis_tests:test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.addressbook.tests.GroupRemovalTests.canRemoveAllGroupsAtOnce&quot;" />
+            <option value="&quot;ru.stqa.mantis.tests.JamesTests.canCreateUser&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -280,19 +278,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.JamesTests.canCreateUser" />
       <item itemvalue="Gradle.LoginTests" />
       <item itemvalue="Gradle.LoginTests.canLogin" />
       <item itemvalue="Gradle.CollectionTests.testMap" />
       <item itemvalue="Gradle.ContactTests.TestPhones" />
-      <item itemvalue="Gradle.GroupRemovalTests.canRemoveAllGroupsAtOnce" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.JamesTests.canCreateUser" />
         <item itemvalue="Gradle.LoginTests" />
         <item itemvalue="Gradle.LoginTests.canLogin" />
         <item itemvalue="Gradle.ContactTests.TestPhones" />
         <item itemvalue="Gradle.CollectionTests.testMap" />
-        <item itemvalue="Gradle.GroupRemovalTests.canRemoveAllGroupsAtOnce" />
       </list>
     </recent_temporary>
   </component>
@@ -441,7 +439,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738002362354</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Http client, Http POST/GET requests">
+      <option name="closed" value="true" />
+      <created>1738084451045</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1738084451045</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -462,7 +468,8 @@
     <MESSAGE value="множества (Set, HashSet)" />
     <MESSAGE value="обратные (обходные) проверки" />
     <MESSAGE value="словари HashMap (ассоциативные массивы)" />
-    <option name="LAST_COMMIT_MESSAGE" value="словари HashMap (ассоциативные массивы)" />
+    <MESSAGE value="Http client, Http POST/GET requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Http client, Http POST/GET requests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -547,7 +554,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/HttpSessionHelper.java</url>
-          <line>24</line>
+          <line>29</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
