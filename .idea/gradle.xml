@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/addressbook_web_tests" />
+            <option value="$PROJECT_DIR$/mantis_tests" />
             <option value="$PROJECT_DIR$/sandbox" />
           </set>
         </option>
