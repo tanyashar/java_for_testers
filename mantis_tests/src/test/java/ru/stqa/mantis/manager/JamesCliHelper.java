@@ -9,8 +9,12 @@ public class JamesCliHelper extends HelperBase{
     }
 
     public void addUser(String email, String password) {
+        // запустить почтовый сервер
+        // в первый раз: java -Dworking.directory=. -jar james-server-jpa-app.jar --generate-keystore
+        // далее: java -Dworking.directory=. -jar james-server-jpa-app.jar
+
         // пример команды в cmd - добавить юзера:
-        // java -cp "james-server-jpa-app.lib/*" org.apache.james.cli.ServerCmd AddUser user1@localhost password
+        // java -cp "james-server-jpa-app.lib/*" java -Dworking.directory=. -jar james-server-jpa-app.jar
 
         // получить список юзеров
         // java -cp "james-server-jpa-app.lib/*" org.apache.james.cli.ServerCmd ListUsers

@@ -76,8 +76,7 @@ public class ApplicationManager {
         try {
             driver.findElement(locator);
             return true;
-        }
-        catch (NoSuchElementException exception) {
+        } catch (NoSuchElementException exception) {
             return false;
         }
     }

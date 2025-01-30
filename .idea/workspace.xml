@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="Http client, Http POST/GET requests">
-      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/common/CommonFunctions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/JamesCliHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/JamesTests.java" afterDir="false" />
+    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="почтовый сервер James Apache">
+      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/MailHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/model/MailMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/MailTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook_web_tests/src/test/java/ru/stqa/addressbook/manager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis_tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/mantis_tests/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mantis_tests/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mantis_tests/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/JamesCliHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/JamesCliHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sandbox/src/main/java/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox/src/main/java/Hello.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +112,7 @@
     "Gradle.JamesTests.canCreateUser.executor": "Run",
     "Gradle.LoginTests.canLogin.executor": "Run",
     "Gradle.LoginTests.executor": "Run",
+    "Gradle.MailTests.canReceiveEmail.executor": "Run",
     "Gradle.ReverseChecks.testSort.executor": "Run",
     "Gradle.ReverseChecks.testSqrt.executor": "Run",
     "Gradle.SquareTests.canCalculateArea.executor": "Run",
@@ -156,31 +161,7 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.JamesTests.canCreateUser">
-    <configuration name="CollectionTests.testMap" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":sandbox:test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.collections.CollectionTests.testMap&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.MailTests.canReceiveEmail">
     <configuration name="ContactTests.TestPhones" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -277,20 +258,44 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="MailTests.canReceiveEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":mantis_tests:test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.mantis.tests.MailTests.canReceiveEmail&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Gradle.MailTests.canReceiveEmail" />
       <item itemvalue="Gradle.JamesTests.canCreateUser" />
       <item itemvalue="Gradle.LoginTests" />
       <item itemvalue="Gradle.LoginTests.canLogin" />
-      <item itemvalue="Gradle.CollectionTests.testMap" />
       <item itemvalue="Gradle.ContactTests.TestPhones" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MailTests.canReceiveEmail" />
         <item itemvalue="Gradle.JamesTests.canCreateUser" />
         <item itemvalue="Gradle.LoginTests" />
         <item itemvalue="Gradle.LoginTests.canLogin" />
         <item itemvalue="Gradle.ContactTests.TestPhones" />
-        <item itemvalue="Gradle.CollectionTests.testMap" />
       </list>
     </recent_temporary>
   </component>
@@ -447,7 +452,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738084451045</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="почтовый сервер James Apache">
+      <option name="closed" value="true" />
+      <created>1738088470105</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1738088470105</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -469,7 +482,8 @@
     <MESSAGE value="обратные (обходные) проверки" />
     <MESSAGE value="словари HashMap (ассоциативные массивы)" />
     <MESSAGE value="Http client, Http POST/GET requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Http client, Http POST/GET requests" />
+    <MESSAGE value="почтовый сервер James Apache" />
+    <option name="LAST_COMMIT_MESSAGE" value="почтовый сервер James Apache" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -574,6 +588,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/MailTests.java</url>
+          <line>8</line>
+          <properties class="ru.stqa.mantis.tests.MailTests" method="canReceiveEmail">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

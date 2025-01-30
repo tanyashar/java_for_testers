@@ -20,8 +20,7 @@ public class Hello {
             System.out.println(configFile.exists());
 
             System.out.println(new File("").getAbsolutePath());
-        // }
-        // catch (ArithmeticException exception) {
+        // } catch (ArithmeticException exception) {
             // отладочная печать = смотреть значение переменных в отладчике
             // exception.printStackTrace();
         //     System.out.println("Division by zero is not allowed");
