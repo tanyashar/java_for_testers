@@ -60,7 +60,4 @@ public class UserRegistrationTests extends TestBase {
         // + 5. проходим по ссылке и завершаем регистрацию пользователя (браузер)
         // + 6. проверяем, что пользователь может залогиниться (HttpSessionHelper)
     }
-
-
-
 }

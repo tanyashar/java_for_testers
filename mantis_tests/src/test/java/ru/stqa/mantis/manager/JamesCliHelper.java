@@ -11,6 +11,7 @@ public class JamesCliHelper extends HelperBase{
     public void addUser(String email, String password) {
         // запустить почтовый сервер
         // cd "C:\Users\tanya\james-server-jpa-guice"
+        // + см. примечания к лекции 8.4 при ошибке авторизации
 
         // в первый раз: java -Dworking.directory=. -jar james-server-jpa-app.jar --generate-keystore
         // далее: java -Dworking.directory=. -jar james-server-jpa-app.jar
