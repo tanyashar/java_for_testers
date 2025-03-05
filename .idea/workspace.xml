@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="Thread.sleep() + startTime, refactor MailHelper">
+    <list default="true" id="9325204a-fe9b-45d9-928e-44c90b292585" name="Changes" comment="8.6 домашка">
+      <change afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/UserRegistrationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/JamesCliHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/JamesCliHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/MailHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/MailHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/SessionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/SessionHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/MailTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/MailTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,16 +107,19 @@
     "Gradle.GroupRemovalTests.executor": "Debug",
     "Gradle.JamesTests.canCreateUser.executor": "Run",
     "Gradle.LoginTests.canLogin.executor": "Run",
+    "Gradle.LoginTests.canLoginWithUI.executor": "Debug",
     "Gradle.LoginTests.executor": "Run",
     "Gradle.MailTests.canDrainInbox.executor": "Run",
     "Gradle.MailTests.canExtractUrl.executor": "Debug",
     "Gradle.MailTests.canReceiveEmail.executor": "Run",
+    "Gradle.MailTests.executor": "Run",
     "Gradle.ReverseChecks.testSort.executor": "Run",
     "Gradle.ReverseChecks.testSqrt.executor": "Run",
     "Gradle.SquareTests.canCalculateArea.executor": "Run",
     "Gradle.SquareTests.canCalculatePerimeter.executor": "Run",
     "Gradle.SquareTests.executor": "Run",
     "Gradle.Tests in 'tests'.executor": "Debug",
+    "Gradle.UserRegistrationTests.canRegisterUser.executor": "Debug",
     "Gradle.java_for_testers:addressbook_web_tests [:addressbook_web_tests:ru.stqa.addressbook.generator.Generator.main()].executor": "Run",
     "Gradle.java_for_testers:sandbox [:sandbox:Geomertry.main()].executor": "Run",
     "Gradle.java_for_testers:sandbox [:sandbox:Hello.main()].executor": "Run",
@@ -155,8 +162,8 @@
       <recent name="Rectangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MailTests.canExtractUrl">
-    <configuration name="JamesTests.canCreateUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.UserRegistrationTests.canRegisterUser">
+    <configuration name="LoginTests.canLoginWithUI" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -169,7 +176,7 @@
           <list>
             <option value=":mantis_tests:test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.mantis.tests.JamesTests.canCreateUser&quot;" />
+            <option value="&quot;ru.stqa.mantis.tests.LoginTests.canLoginWithUI&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,7 +187,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MailTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -193,31 +200,7 @@
           <list>
             <option value=":mantis_tests:test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.mantis.tests.LoginTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="MailTests.canDrainInbox" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":mantis_tests:test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.mantis.tests.MailTests.canDrainInbox&quot;" />
+            <option value="&quot;ru.stqa.mantis.tests.MailTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -276,20 +259,44 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="UserRegistrationTests.canRegisterUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":mantis_tests:test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.mantis.tests.UserRegistrationTests.canRegisterUser&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Gradle.MailTests.canDrainInbox" />
+      <item itemvalue="Gradle.LoginTests.canLoginWithUI" />
+      <item itemvalue="Gradle.MailTests" />
+      <item itemvalue="Gradle.UserRegistrationTests.canRegisterUser" />
       <item itemvalue="Gradle.MailTests.canExtractUrl" />
       <item itemvalue="Gradle.MailTests.canReceiveEmail" />
-      <item itemvalue="Gradle.JamesTests.canCreateUser" />
-      <item itemvalue="Gradle.LoginTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.UserRegistrationTests.canRegisterUser" />
         <item itemvalue="Gradle.MailTests.canExtractUrl" />
+        <item itemvalue="Gradle.MailTests" />
+        <item itemvalue="Gradle.LoginTests.canLoginWithUI" />
         <item itemvalue="Gradle.MailTests.canReceiveEmail" />
-        <item itemvalue="Gradle.MailTests.canDrainInbox" />
-        <item itemvalue="Gradle.JamesTests.canCreateUser" />
-        <item itemvalue="Gradle.LoginTests" />
       </list>
     </recent_temporary>
   </component>
@@ -470,7 +477,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738204828573</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="regular expressions">
+      <option name="closed" value="true" />
+      <created>1738205617947</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1738205617947</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -495,7 +510,8 @@
     <MESSAGE value="почтовый сервер James Apache" />
     <MESSAGE value="почтовый сервер James Apache - read Email" />
     <MESSAGE value="Thread.sleep() + startTime, refactor MailHelper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Thread.sleep() + startTime, refactor MailHelper" />
+    <MESSAGE value="regular expressions" />
+    <option name="LAST_COMMIT_MESSAGE" value="regular expressions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -584,9 +600,39 @@
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/MailTests.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="58" />
+          <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/LoginTests.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/UserRegistrationTests.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/MailHelper.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/SessionHelper.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/SessionHelper.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/SessionHelper.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/JamesCliHelper.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/sandbox/src/main/java/Hello.java</url>
@@ -608,12 +654,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/tests/MailTests.java</url>
-          <line>11</line>
+          <line>12</line>
           <properties class="ru.stqa.mantis.tests.MailTests" method="canReceiveEmail">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/mantis_tests/src/test/java/ru/stqa/mantis/manager/SessionHelper.java</url>
+          <line>16</line>
+          <properties class="ru.stqa.mantis.manager.SessionHelper" method="isLoggedIn">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="71" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

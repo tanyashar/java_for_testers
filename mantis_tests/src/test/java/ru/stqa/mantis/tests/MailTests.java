@@ -2,6 +2,7 @@ package ru.stqa.mantis.tests;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import ru.stqa.mantis.manager.MailHelper;
 
 import java.time.Duration;
 import java.util.regex.Pattern;
@@ -26,10 +27,8 @@ public class MailTests extends TestBase{
         var messages = app.mail().receive("user1@localhost", "password", Duration.ofSeconds(120));
         var text = messages.get(0).content();
 
-        Pattern pattern = Pattern.compile("http://\\S+");
-        var matcher = pattern.matcher(text);
-        if (matcher.find()) {
-            var url = text.substring(matcher.start(), matcher.end());
+        var url = MailHelper.extractUrlFromMessage(text);
+        if (url != null) {
             System.out.println(url);
         }
     }
