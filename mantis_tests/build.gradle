@@ -16,7 +16,7 @@ dependencies {
     testImplementation("com.squareup.okhttp3:okhttp:4.12.0") // для отправки Http-запросов
     testImplementation("com.squareup.okhttp3:okhttp-urlconnection:4.12.0") // для работы с cookies Http-клиента
     implementation 'org.eclipse.angus:angus-mail:2.0.3'
-
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.1'
 }
 
 test {
