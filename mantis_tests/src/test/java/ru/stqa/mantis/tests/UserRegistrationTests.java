@@ -60,4 +60,25 @@ public class UserRegistrationTests extends TestBase {
         // + 5. проходим по ссылке и завершаем регистрацию пользователя (браузер)
         // + 6. проверяем, что пользователь может залогиниться (HttpSessionHelper)
     }
+
+    @ParameterizedTest
+    @MethodSource("randomUsernames")
+    public void canRegisterUserWithJamesApi(String username) {
+        var email = String.format("%s@localhost", username);
+        var password = "password";
+
+        app.jamesApi().addUser(email, password);
+
+        app.session().signUpForNewAccount(username, email);
+
+        var messages = app.mail().receive(email, password, Duration.ofSeconds(120));
+        var url = MailHelper.extractUrlFromMessage(messages.get(0).content());
+        Assertions.assertNotNull(url);
+
+        app.session().goToUrl(url);
+        app.session().updateUser(username, password);
+
+        app.http().login(username, password);
+        Assertions.assertTrue(app.http().isLoggedIn());
+    }
 }
