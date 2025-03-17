@@ -10,6 +10,9 @@ import io.swagger.client.model.Issue;
 import ru.stqa.mantis.model.IssueData;
 
 public class RestApiHelper extends HelperBase {
+
+    // REST = Representational State Transfer = удаленный программный вызов
+
     public RestApiHelper(ApplicationManager manager) {
         super(manager);
 
