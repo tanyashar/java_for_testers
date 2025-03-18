@@ -2,8 +2,13 @@ package ru.stqa.addressbook.manager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 
 // класс для управления тестируемым приложением (для взаимодействия с ним)
@@ -16,15 +21,27 @@ public class ApplicationManager {
     private JdbcHelper jdbc;
     private HibernateHelper hbm;
 
-    public void init(String browser, Properties properties) {
+    public void init(String browser, Properties properties) throws MalformedURLException {
         this.properties = properties;
         if (driver == null) {
-            if ("firefox".equals(browser))
-                driver = new FirefoxDriver();
-            else if ("chrome".equals(browser))
-                driver = new ChromeDriver();
-            else
+            var seleniumServer = properties.getProperty("seleniumServer");
+            if ("firefox".equals(browser)) {
+                if (seleniumServer != null) {
+                    driver = new RemoteWebDriver(new URL(seleniumServer), new FirefoxOptions());
+                } else {
+                    driver = new FirefoxDriver();
+                }
+            }
+            else if ("chrome".equals(browser)) {
+                if (seleniumServer != null) {
+                    driver = new RemoteWebDriver(new URL(seleniumServer), new ChromeOptions());
+                } else {
+                    driver = new ChromeDriver();
+                }
+            }
+            else {
                 throw new IllegalArgumentException(String.format("Unknown browser %s", browser));
+            }
 
             // регистрируем код, который должен произойти в конце
             Runtime.getRuntime().addShutdownHook(new Thread(driver::quit));
