@@ -37,6 +37,6 @@ public class GroupRemovalTests extends TestBase {
         }
 
         app.groups().removeAllGroups();
-        Assertions.assertEquals(0, app.hbm().getCount());
+        Assertions.assertEquals(1, app.hbm().getCount());
     }
 }
