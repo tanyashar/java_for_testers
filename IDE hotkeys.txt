@@ -1,0 +1,191 @@
+убить процесс app.exe:
+	taskkill /f /t /im app.exe
+
+узнать текущую версию java на машине: 
+	echo %JAVA_HOME%
+	
+-----------
+
+Ctrl + Alt + L = Reformat code = применить стиль кода
+Ctrl + Alt + O = Optimize imports
+Shift + F6 = Rename method/instance/etc.
+Shift + F9 = Debug project
+Alt + Shift + Up/Down = Move row up or down
+Ctrl + / = Comment line
+Ctrl + Shift + / = Comment multiple lines
+Ctrl + Alt + T = Surround with (e.g. region)
+Ctrl + F6 = Change class/method signature
+Ctrl + Shift + R = Replace All
+Ctrl + Alt + M = Refactor -> Extract Method
+Ctrl + Ctrl + Up/Down = ввод одного текста на нескольких строках
+
+-----------
+
+TODO:
+- Generics
+- Interfaces (? implements)
+- Threads
+- ? геттеры и сеттеры в классах (см. библиотека lombok)
+- еще раз - разница между record и class ?
+- ? работа с ресурсами
+
+-----------
+
+Поиск имени библиотеки для добавления в файл сборки (build.gradle)
+https://central.sonatype.com/ 
+Выбирать Gradle (short) 
+
+-----------
+
+junit и testengine - две библиотеки java для тестирования
+
+-----------
+
+extends = ключевое слово в языке java для обозначения НАСЛЕДОВАНИЯ
+
+JSON = JavaScript Object Notation
+YAML = Yet Another Markup* Language
+XML = Extended Markup* Language
+
+*Markup Language = язык разметки
+
+JDBC = Java DataBase Connectivity - библиотека для работы с БД
+язык OQL = Object Query Language - для запросов к БД из библиотеки Hibernate
+
+build.gradle notation: // 'groupId:artifactId:version'
+
+-----------
+
+5.3 - входные параметры args для main - запуск из командной строки
+5.8 - получение входных параметров через config-файл *.properties
+??? - record vs. class
+??? - свойства класса + ленивая инициализация
+
+-----------
+
+5.8
+config-файлы = файлы *.properties
+в них название параметра = значение параметра, оба - строки
+описывает конфигурацию окружения (e.g. адрес сервера/логин/пароль)
+в этом файле кавычки для значений не указываются
+
+e.g. "local.properties" в модуле addressbook_web_tests
+	т.к. в нем описывается тестовый стенд, находящийся на локальной машине localhost
+	
+в аргументы вызываемого метода добавляется параметр Properties из java.util.Properties
+
+-----------
+
+7.3 функциональное программирование
+
+императивный стиль программирования - с циклами for
+функциональный стиль программирования - используются цепочки вызова функций (e.g. со стримами)
+
+функции-генераторы = suppliers = не имеют входных параметров, генерируют данные, к-е потом могут двигаться по потоку Stream. 
+функции-потребители = consumers = в конце потока обрабатывает данные, есть входные параметры, но не имеет результата, она поглощает все данные из потока 
+функции-трансформеры = functions = по пути эти данные могут преобразовываться = map
+
+jar-файл по сути - это zip-архив, чтобы посмотреть, что внутри - можно использовать любой архиватор
+
+-----------
+
+8.5 работа с почтовым сервером
+
+cd C:\Users\tanya\james-server-jpa-guice
+
+запустить почтовый сервер
+	в первый раз: java -Dworking.directory=. -jar james-server-jpa-app.jar --generate-keystore
+	далее: java -Dworking.directory=. -jar james-server-jpa-app.jar
+
+пример команды в cmd - добавить юзера:
+	java -cp "james-server-jpa-app.lib/*" java -Dworking.directory=. -jar james-server-jpa-app.jar
+
+остановить почтовый сервер в cmd:
+	Ctrl + C
+
+jakarta mail - нотификация для всех библиотек, к-я должна работать с почтой
+jakarta.mail-api specification api - спецификация библиотеки для работы с почтой 
+angus-mail - пример реализации спецификации
+// только angus-mail достаточно для старого протокола POP3
+// для протокола IMAP нужно добавить еще кое-какие зависимости ??? КАКИЕ ??? 
+
+-----------
+
+REST = Representational State Transfer = удаленный программный вызов
+
+RPC = Remote Procedure Call
+	SOAP = Simple Object Access Protocol - технология RPC - более древняя, чем REST
+	Основывается на языке разметки XML
+
+-----------
+
+9.5 Swagger (плагин для генерации кода)
+
+Документация по mantis - C:\xampp\htdocs\mantisbt-2.25.8\api
+Инструменты для ведения документации - swagger, postman
+	Для Swagger есть плагин
+	
+Чтобы запустить генератор swagger-кода выполнить: 
+	PS C:\Users\tanya\IdeaProjects\java_for_testers> .\gradlew generateSwaggerCode
+После исполнения команды получаем полностью готовый модуль в директориии mantis_tests/build/swagger-code-mantis/src
+
+-----------
+
+10.1 Allure Report (отчеты о тестах)
+
+чтобы запустить тесты из консоли: 
+	.\gradlew test
+	.\gradlew clean test
+	..\gradlew clean test --tests "*.GroupRemovalTests.canRemoveGroup" = запустить только один тест canRemoveGroup
+
+отчет от gradle из коробки (в формате html) лежит здесь:
+	..\java_for_testers\addressbook_web_tests\build\reports\tests\test\index.html
+
+файлы для генерации отчета в папке allure-results
+	C:\Users\tanya\IdeaProjects\java_for_testers\addressbook_web_tests\allure-results
+
+генератор отчета из файлов: 
+	(!) cd addressbook_web_tests
+	C:\allure-2.33.0\bin\allure.bat generate
+
+все, что лежит в папке allure-results преобразуется в allure-report
+	C:\Users\tanya\IdeaProjects\java_for_testers\addressbook_web_tests\allure-report
+
+сгенерировать + опубликовать отчет на сервер (папка allure-report тогда не появится): 
+	C:\allure-2.33.0\bin\allure.bat serve
+	или
+	C:\allure-2.33.0\bin\allure.bat serve --host localhost --port 8000
+
+для сохранения истории тестов скопировать папку allure-report/history и поместить в allure-results
+
+-----------
+
+10.3 Jenkins
+
+запустить jenkins (по дефолту он запускается на localhost:8080)
+
+cd C:\jenkins
+java -jar jenkins.war
+
+Ctrl + C = остановить
+
+administrator
+root
+
+-----------
+
+10.5 Selenium Server (Selenium Grid)
+CI = Continuous Integration = Непрерывная интеграция
+Selenium server = Selenium Grid
+запустить:
+сd C:\Selenium Grid
+java -jar selenium-server-4.29.0.jar standalone
+
+Selenium Grid может работать распределенно - запросы отправляются в хаб/диспетчер,
+	а он в свою очередь распределяет задачу на одну из доступных машин 
+
+запустить тест canRemoveGroup, используя config-файл ci.properties (по конфигам = выполнить тест через Selenium Server):
+	cd C:\Users\tanya\IdeaProjects\java_for_testers\addressbook_web_tests
+	 ..\gradlew -Ptarget='ci.properties' clean test --tests "*.GroupRemovalTests.canRemoveGroup"
+
+-----------	
